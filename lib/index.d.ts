@@ -16,6 +16,7 @@ declare namespace fluentLogger {
     timeout?: number;
     tls?: any;
     tlsOptions?: any;
+    enableReconnect?: boolean;
     reconnectInterval?: number;
     requireAckResponse?: boolean;
     ackResponseTimeout?: number;

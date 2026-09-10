@@ -283,6 +283,8 @@ logger.info('end of log message');
 logger.end();
 ```
 
+The transport constructor accepts the same options as `createFluentSender`, including `enableReconnect`.
+
 **NOTE** If you use `winston@2`, you can use `fluent-logger@2.7.0` or earlier. If you use `winston@3`, you can use `fluent-logger@2.8` or later.
 
 ### stream
@@ -342,6 +344,11 @@ See [socket.setTimeout][2]
 
 Set the reconnect interval in milliseconds.
 If error occurs then reconnect after this interval.
+
+**enableReconnect**
+
+Enable automatic reconnect. Default is `true`.
+Set this to `false` to disable automatic reconnect.
 
 [1]: https://nodejs.org/api/net.html#net_socket_connect_path_connectlistener
 [2]: https://nodejs.org/api/net.html#net_socket_settimeout_timeout_callback
